@@ -1,4 +1,5 @@
 // import Swiper from "swiper";
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import BrainDevelopment from "../BrainDevelopment/BrainDevelopment";
 import Category from "../Category/Category";
@@ -8,14 +9,19 @@ import Varities from "../Varities/Varities";
 
 const Home = () => {
     return (
-        <div>
+        <>
+        <Helmet>
+            <title>
+                Nightfall | Home
+            </title>
+        </Helmet>
             <Banner />
             <Varities></Varities>
             <Category></Category>
             <NewArrival></NewArrival>
             <BrainDevelopment></BrainDevelopment>
             <FollowUs></FollowUs>
-        </div>
+        </>
     );
 };
 

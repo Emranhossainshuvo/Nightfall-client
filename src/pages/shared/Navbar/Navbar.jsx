@@ -4,10 +4,10 @@ const Navbar = () => {
   const navoptions = (
     <>
       <li>
-        <Link to='/products'>Products</Link>
+        <Link to='/'>Home</Link>
       </li>
       <li>
-        <a>Parent</a>
+        <Link to="/products">Products</Link>
       </li>
       <li>
         <a>Item 3</a>
@@ -39,9 +39,14 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >{navoptions}</ul>
+            >
+              {navoptions}
+            </ul>
           </div>
-          <a><span className="text-xl font-bold">Nightfall</span> <br /> <span>Art supplies</span></a>
+          <a>
+            <span className="text-xl font-bold">Nightfall</span> <br />{" "}
+            <span>Art supplies</span>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navoptions}</ul>
