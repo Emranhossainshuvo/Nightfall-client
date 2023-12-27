@@ -1,5 +1,6 @@
 // import Swiper from "swiper";
 import Banner from "../Banner/Banner";
+import BrainDevelopment from "../BrainDevelopment/BrainDevelopment";
 import Category from "../Category/Category";
 import FollowUs from "../FollowUs/FollowUs";
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner />
             <Category></Category>
+            <BrainDevelopment></BrainDevelopment>
             <FollowUs></FollowUs>
         </div>
     );
