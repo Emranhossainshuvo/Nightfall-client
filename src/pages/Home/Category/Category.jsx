@@ -1,7 +1,9 @@
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+
 const Category = () => {
   return (
     <div className="my-10">
-      <h2>Categories</h2>
+      <SectionTitle heading='Categories'></SectionTitle>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
           <figure>
