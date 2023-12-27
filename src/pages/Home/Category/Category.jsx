@@ -1,11 +1,12 @@
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
+import 'aos/dist/aos.css';
 const Category = () => {
   return (
     <div className="my-10">
       <SectionTitle heading='Categories'></SectionTitle>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="card  card-compack p-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  p-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/nB2z957/mixed-orange-blue-paint-with-brush.jpg"
@@ -20,7 +21,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="card  card-compack px-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  px-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/LrzYwPT/various-brushes.jpg"
@@ -35,7 +36,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="card  card-compack px-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  px-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/L5mGpnY/top-view-notebook-with-watercolor-macarons.jpg"
@@ -50,7 +51,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="card  card-compack px-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  px-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/LxXtSQc/colorful-different-scrapbook-card-with-decorative-elements.jpg"
@@ -65,7 +66,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="card  card-compack px-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  px-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/1qnJtNZ/blank-white-frame-with-pink-border-colored-pencils-glass-wooden-desk.jpg"
@@ -80,7 +81,7 @@ const Category = () => {
             </div>
           </div>
         </div>
-        <div className="card  card-compack px-2 bg-base-100 shadow-xl">
+        <div data-aos="fade-up" className="card  card-compack  px-2 bg-base-100 shadow-xl">
           <figure>
             <img
               src="https://i.ibb.co/Qm4bPSd/beautiful-roman-figure-carving.jpg"

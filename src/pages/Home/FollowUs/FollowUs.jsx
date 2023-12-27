@@ -1,6 +1,6 @@
 const FollowUs = () => {
   return (
-    <div className="my-10 text-center">
+    <div data-aos="fade-up" className="my-10 text-center">
       <div className="my-5">
         <h1 className="text-2xl font-medium">Connect with us</h1>
         <hr />

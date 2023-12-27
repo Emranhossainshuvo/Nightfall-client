@@ -1,9 +1,9 @@
-import moment from 'moment';
+import moment from "moment";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer data-aos="fade-up" className="footer footer-center p-10 bg-base-200 text-base-content rounded">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
@@ -48,7 +48,10 @@ const Footer = () => {
           </div>
         </nav>
         <aside>
-          <p>Copyright © {moment().format("Y") } - All right reserved by ACME Industries Ltd</p>
+          <p>
+            Copyright © {moment().format("Y")} - All right reserved by ACME
+            Industries Ltd
+          </p>
         </aside>
       </footer>
     </>
