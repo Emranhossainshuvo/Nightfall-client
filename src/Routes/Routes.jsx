@@ -3,7 +3,7 @@ import {
   } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
-import Product from "../pages/Products/Products/Products";
+import Products from "../pages/Products/Products/Products";
 
 
   export const router = createBrowserRouter([
@@ -17,7 +17,7 @@ import Product from "../pages/Products/Products/Products";
         }, 
         {
           path: 'products', 
-          element:<Product></Product> 
+          element:<Products></Products> 
         }
       ]
     },
