@@ -1,25 +1,23 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-const Cover = ({img}) => {
+const Cover = ({ img, title }) => {
   return (
     <>
-      <div
-        className="hero min-h-screen"
+      <div  data-aos="fade-up"
+        className="hero h-[900px]"
         style={{
-          backgroundImage:
-            `url(${img})`,
+          backgroundImage: `url(${img})`,
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
+        <div className="hero-overlay  bg-opacity-60"></div>
+        <div data-aos="fade-up" className="hero-content text-center text-neutral-content">
+          <div data-aos="fade-up" className="max-w-md">
+            <h1 data-aos="fade-up" className="mb-5 text-5xl font-bold uppercase">{title}</h1>
+            <p data-aos="fade-up" className="mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>
@@ -30,5 +28,6 @@ const Cover = ({img}) => {
 export default Cover;
 
 Cover.propTypes = {
-    img: PropTypes.string 
-}
+  img: PropTypes.string,
+  title: PropTypes.string
+};

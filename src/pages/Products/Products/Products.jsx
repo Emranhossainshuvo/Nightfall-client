@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Cover from "../../shared/Cover/Cover";
+import NewArrival from "../../Home/NewArrival/NewArrival";
 
 const Products = () => {
 
@@ -10,8 +11,8 @@ const Products = () => {
             <Helmet>
                 <title>Nightfall | Products </title>
             </Helmet>
-            <Cover img={imgUrl}></Cover>
-            <h1>Products page here</h1>            
+            <Cover img={imgUrl} title={'All products'}></Cover>
+            
         </>
     );
 };
