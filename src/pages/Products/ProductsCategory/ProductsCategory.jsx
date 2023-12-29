@@ -5,7 +5,7 @@ import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const ProductsCategory = ({ items, title, coverImg, heading }) => {
   return (
-    <div>
+    <div className="my-20">
       {title && <Cover img={coverImg} title={title}></Cover>}
       <SectionTitle heading={heading}></SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
