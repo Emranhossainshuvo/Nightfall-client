@@ -4,7 +4,10 @@ const Varities = () => {
   return (
     <>
       <SectionTitle heading={"BEST SELLING"}></SectionTitle>
-      <div data-aos="fade-up" className="flex justify-center gap-5 my-10">
+      <div
+        data-aos="fade-up"
+        className="md:flex text-center justify-center md:gap-5 my-10"
+      >
         <div className="text-lg font-normal brdr p-2 hover:bg-[#FFE3E1] hover:cursor-pointer">
           <p>Painting</p>
         </div>

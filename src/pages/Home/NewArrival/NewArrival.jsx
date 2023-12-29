@@ -6,19 +6,6 @@ import useProducts from "../../../Hooks/useProducts";
 const NewArrival = () => {
   const [products] = useProducts(); 
   const newArrivals = products.filter(item => item.category === 'newArrival')
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("products.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const newArrivals = data.filter(
-  //         (item) => item.category === "newArrival"
-  //       );
-  //       setProducts(newArrivals);
-  //     });
-  // }, []);
-
   return (
     <>
       <SectionTitle heading="NEW ARRIVAL"></SectionTitle>
