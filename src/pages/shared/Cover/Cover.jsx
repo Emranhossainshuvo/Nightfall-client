@@ -31,3 +31,5 @@ Cover.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string
 };
+
+
