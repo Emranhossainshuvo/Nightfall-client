@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 import 'aos/dist/aos.css';
@@ -17,7 +18,7 @@ const Category = () => {
             <h2 className="card-title">Pigments</h2>
             <p>Explore vibrant colors for diverse artistic techniques.</p>
             <div className="card-actions justify-center">
-              <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+              <Link to='/order'><button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button></Link>
             </div>
           </div>
         </div>
@@ -32,7 +33,10 @@ const Category = () => {
             <h2 className="card-title">Brushes</h2>
             <p>Precision and finesse with a range of high-quality brushes.</p>
             <div className="card-actions justify-center">
+              <Link to="/order">
+
               <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +51,10 @@ const Category = () => {
             <h2 className="card-title">Sketchbooks</h2>
             <p>Premium sketchbooks for versatile and inspiring drawing.</p>
             <div className="card-actions justify-center">
+            <Link to="/order">
+                
               <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+                </Link>
             </div>
           </div>
         </div>
@@ -62,7 +69,10 @@ const Category = () => {
             <h2 className="card-title">Crafting</h2>
             <p>Dive into DIY projects with diverse crafting materials.</p>
             <div className="card-actions justify-center">
+            <Link to="/order">
+                
               <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+                </Link>
             </div>
           </div>
         </div>
@@ -77,7 +87,10 @@ const Category = () => {
             <h2 className="card-title">Canvas</h2>
             <p>Elevate your art with quality canvases.</p>
             <div className="card-actions justify-center">
+            <Link to="/order">
+                
               <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+                </Link>
             </div>
           </div>
         </div>
@@ -92,7 +105,10 @@ const Category = () => {
             <h2 className="card-title">Sculpture</h2>
             <p>Shape and mold with tools for 3D creations.</p>
             <div className="card-actions justify-center">
+            <Link to="/order">
+                
               <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">View all</button>
+                </Link>
             </div>
           </div>
         </div>

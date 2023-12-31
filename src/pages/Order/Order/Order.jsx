@@ -3,7 +3,6 @@ import Cover from "../../shared/Cover/Cover";
 import "react-tabs/style/react-tabs.css";
 import { useState } from "react";
 import useProducts from "../../../Hooks/useProducts";
-import OrderCard from "../../../components/OrderCard/OrderCard";
 import OrderTab from "../../../components/OrderCard/OrderTab";
 
 const Order = () => {
@@ -48,13 +47,13 @@ const Order = () => {
             </Tab>
           </TabList>
           <TabPanel>
-            <OrderTab items={pigments}></OrderTab>
+            <OrderTab items={pigments} heading={'Pigments'}></OrderTab>
           </TabPanel>
-          <TabPanel><OrderTab items={brushes}></OrderTab></TabPanel>
-          <TabPanel><OrderTab items={sketchbooks}></OrderTab></TabPanel>
-          <TabPanel><OrderTab items={crafting}></OrderTab></TabPanel>
-          <TabPanel><OrderTab items={canvas}></OrderTab></TabPanel>
-          <TabPanel><OrderTab items={sculpture}></OrderTab></TabPanel>
+          <TabPanel><OrderTab items={brushes} heading={'Brushes'}></OrderTab></TabPanel>
+          <TabPanel><OrderTab items={sketchbooks} heading={'Sketchbooks'}></OrderTab></TabPanel>
+          <TabPanel><OrderTab items={crafting} heading={'Crafting'}></OrderTab></TabPanel>
+          <TabPanel><OrderTab items={canvas} heading={'Canvas'}></OrderTab></TabPanel>
+          <TabPanel><OrderTab items={sculpture} heading={'Sculpture'}></OrderTab></TabPanel>
         </Tabs>
       </>
     </>

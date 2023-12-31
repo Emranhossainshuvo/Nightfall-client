@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Cover from "../../shared/Cover/Cover";
 import useProducts from "../../../Hooks/useProducts";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import ProductsCategory from "../ProductsCategory/ProductsCategory";
 
 
