@@ -4,12 +4,17 @@ import "react-tabs/style/react-tabs.css";
 import { useState } from "react";
 import useProducts from "../../../Hooks/useProducts";
 import OrderTab from "../../../components/OrderCard/OrderTab";
+import { useParams } from "react-router-dom";
 
 const Order = () => {
   const orderCover =
     "https://i.ibb.co/bX5c3Pk/online-fashion-shopping-with-laptop.jpg";
+    
+    const categories = ['pigments', 'brushes', 'sketchbooks', 'crafting', 'canvas', 'sculpture']
+    const {category} = useParams(); 
+    const initialIndex = categories.indexOf(category); 
 
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(initialIndex);
   const [products] = useProducts();
 
   const pigments = products.filter((item) => item.category === "pigments");
