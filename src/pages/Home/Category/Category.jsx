@@ -26,7 +26,7 @@ const Category = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Pigments</h2>
+            <h2 className="card-title">Pigments slkd</h2>
             <p>Explore vibrant colors for diverse artistic techniques.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${pigments}`}>
