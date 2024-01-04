@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   // login functionality from the context
@@ -132,6 +133,7 @@ const Login = () => {
                   Continue with Twitter
                 </a>
               </form>
+              <p><small>New her? <Link to='/signup' className="text-green-600">Create an account</Link></small></p>
             </div>
           </div>
         </div>
