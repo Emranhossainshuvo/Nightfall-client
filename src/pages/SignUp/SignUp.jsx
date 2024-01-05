@@ -16,13 +16,10 @@ const SignUp = () => {
 
   // user creating function
   const onSubmit = (data) =>{
-   console.log(data)
+  //  console.log(data)
    createUser(data.email, data.password)
-   .then(res => {
-    const user = res.user; 
-    console.log(user); 
-   })
-   .then(error => {
+   .then(()=> {})
+   .catch(error => {
     console.log(error)
    })
   };
