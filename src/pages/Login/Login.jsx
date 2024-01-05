@@ -133,7 +133,7 @@ const Login = () => {
                   Continue with Twitter
                 </a>
               </form>
-              <p><small>New her? <Link to='/signup' className="text-green-600">Create an account</Link></small></p>
+              <p><small>New here? <Link to='/signup' className="text-green-600">Create an account</Link></small></p>
             </div>
           </div>
         </div>
