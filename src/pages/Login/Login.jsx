@@ -6,6 +6,8 @@ const Login = () => {
   // login functionality from the context
   const { signIn } = useContext(AuthContext);
 
+  
+
   const handleLogin = (e) => {
     e.preventDefault();
     // console.log('login button clicked')
