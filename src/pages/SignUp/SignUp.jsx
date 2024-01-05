@@ -1,30 +1,33 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
   // sign up functionality from the context
-  const {createUser} = useContext(AuthContext); 
-
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate(); 
   // functionality from react hook form
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
   // user creating function
-  const onSubmit = (data) =>{
-  //  console.log(data)
-   createUser(data.email, data.password)
-   .then(()=> {})
-   .catch(error => {
-    console.log(error)
-   })
+  const onSubmit = (data) => {
+     console.log(data)
+    createUser(data.email, data.password)
+      .then(() => {
+        updateUserProfile(data.name, data.photoURL)
+        .then(() => { reset(); navigate('/')})
+        .catch(error => console.log(error))
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
-
 
   // console.log(watch("example"));
 
@@ -42,6 +45,20 @@ const SignUp = () => {
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+              {/* image form control */}
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Photo URL"
+                  {...register("photoURL", { required: true })}
+                  className="input input-bordered"
+                />
+                {errors.photoURL && <span>This field is required</span>}
+              </div>
+              {/* name form control */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -55,6 +72,7 @@ const SignUp = () => {
                 />
                 {errors.name && <span>This field is required</span>}
               </div>
+              {/* email form control */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -68,6 +86,7 @@ const SignUp = () => {
                 />
                 {errors.email && <span>This field is required</span>}
               </div>
+              {/* password form control */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
@@ -92,10 +111,21 @@ const SignUp = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <input className="btn btn-primary" type="submit" value="Sign up" />
+                <input
+                  className="btn btn-primary"
+                  type="submit"
+                  value="Sign up"
+                />
               </div>
             </form>
-            <p><small>Already have an account? <Link to='/login' className="text-green-600">Sign in</Link></small></p>
+            <p>
+              <small>
+                Already have an account?{" "}
+                <Link to="/login" className="text-green-600">
+                  Sign in
+                </Link>
+              </small>
+            </p>
           </div>
         </div>
       </div>
