@@ -12,7 +12,7 @@ const ProductItem = ({ item }) => {
           <h2 className="card-title">{name}</h2>
           <p>{details}</p>
           <div className="card-actions justify-center">
-            <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+            <button className="btn text-black bg-[#FFD1D1] hover:bg-[#FFE3E1]">
               ${price}
             </button>
           </div>

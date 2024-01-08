@@ -7,29 +7,30 @@ const Navbar = () => {
 
   // log out functionality implementation
   const handleLogOut = () => {
-      logOut()
+    logOut()
       .then(() => {})
-      .catch(error => {
-        console.log(error)
-      })
-  }
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const navoptions = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link className="hover:btn hover:btn-sm" to="/">Home</Link>
       </li>
       <li>
-        <Link to="/products">Products</Link>
+        <Link className="hover:btn hover:btn-sm" to="/products">Products</Link>
       </li>
       <li>
-        <Link to="/order/pigments">Order online</Link>
+        <Link className="hover:btn hover:btn-sm" to="/order/pigments">Order online</Link>
       </li>
 
       {user ? (
         <>
-        <span>{user?.displayName}</span>
-        <button onClick={handleLogOut} className="btn btn-neutral">Log out</button>
+          <button onClick={handleLogOut} className="hover:btn hover:btn-sm">
+            Log out
+          </button>
         </>
       ) : (
         <>
@@ -78,7 +79,17 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navoptions}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn ">Button</a>
+          {user ? (
+            <div className="avatar online">
+              <div className="w-14 rounded-full ring ring-primary bg-pink-700 ring-offset-2">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          ) : (
+            <Link to="/signup">
+              <img src="https://i.ibb.co/xzWmCqC/icons8-login-50.png" alt="" />
+            </Link>
+          )}
         </div>
       </div>
     </>

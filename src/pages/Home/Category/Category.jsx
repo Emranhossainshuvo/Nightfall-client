@@ -30,7 +30,7 @@ const Category = () => {
             <p>Explore vibrant colors for diverse artistic techniques.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${pigments}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
@@ -52,7 +52,7 @@ const Category = () => {
             <p>Precision and finesse with a range of high-quality brushes.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${brushes}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
@@ -74,7 +74,7 @@ const Category = () => {
             <p>Premium sketchbooks for versatile and inspiring drawing.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${sketchbooks}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
@@ -96,7 +96,7 @@ const Category = () => {
             <p>Dive into DIY projects with diverse crafting materials.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${crafting}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
@@ -118,7 +118,7 @@ const Category = () => {
             <p>Elevate your art with quality canvases.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${canvas}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
@@ -140,7 +140,7 @@ const Category = () => {
             <p>Shape and mold with tools for 3D creations.</p>
             <div className="card-actions justify-center">
               <Link to={`/order/${sculpture}`}>
-                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1]">
+                <button className="btn bg-[#FFD1D1] hover:bg-[#FFE3E1] text-black">
                   View all
                 </button>
               </Link>
