@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const OrderCard = ({ item }) => {
-  const { name, image, details, price } = item || {};
+  const { name, image, details, price, _id } = item || {};
   const { user } = useAuth();
   const navigate = useNavigate(); 
   const location = useLocation(); 
@@ -13,6 +13,13 @@ const OrderCard = ({ item }) => {
   const handleAddToCart = product => {
     if (user && user.email) {
       // TODO: send card data to the database
+      const cartItem = {
+        orderId: _id, 
+        email: user.emial, 
+        name,
+        image, 
+        price
+      }
     }
     else {
       Swal.fire({
