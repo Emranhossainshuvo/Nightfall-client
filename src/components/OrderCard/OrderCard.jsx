@@ -1,21 +1,32 @@
 import PropTypes from 'prop-types'
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
-const OrderCard = ({item}) => {
+const OrderCard = ({ item }) => {
   const { name, image, details, price } = item || {};
-  const {user} = useAuth(); 
+  const { user } = useAuth();
+  const navigate = useNavigate(); 
+  const location = useLocation(); 
 
   const handleAddToCart = product => {
-    if(user && user.email){
+    if (user && user.email) {
       // TODO: send card data to the database
     }
-    else{
+    else {
       Swal.fire({
-        title: "No user found?",
-        text: "User must login to add product",
-        icon: "question"
+        title: "Please login first",
+        text: "Only registered use can add products to card",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Login!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/login', {state: {from: location}})
+        }
       });
     }
   }
@@ -35,7 +46,7 @@ const OrderCard = ({item}) => {
           <h2 className="card-title">{name}</h2>
           <p>{details}</p>
           <div className="card-actions justify-end">
-            <button onClick={() => handleAddToCart(item) } className="btn btn-primary">Add to cart</button>
+            <button onClick={() => handleAddToCart(item)} className="btn btn-primary">Add to cart</button>
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../Hooks/useAuth";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   // login functionality from the context
-  const { signIn } = useAuth;
+  const { signIn } = useContext(AuthContext);
 
   const navigate = useNavigate(); 
   const location = useLocation(); 
