@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import useCart from "../../../Hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  const [cart] = useCart();  
 
   // log out functionality implementation
   const handleLogOut = () => {
