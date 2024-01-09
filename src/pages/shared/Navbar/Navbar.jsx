@@ -4,12 +4,14 @@ import useCart from "../../../Hooks/useCart";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-  const [cart] = useCart();  
+  const [cart] = useCart();
+
+  // console.log(cart.length)
 
   // log out functionality implementation
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => {
         console.log(error);
       });
@@ -87,18 +89,21 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="avatar online">
+            <div className="avatar">
+                <span className="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                  {cart.length} 
+                </span>
               <div className="w-14 rounded-full ring ring-primary bg-pink-700 ring-offset-2">
                 <img src={user?.photoURL} />
               </div>
             </div>
           ) : (
-              <Link to="/signup">
-                <img
-                  src="https://i.ibb.co/xzWmCqC/icons8-login-50.png"
-                  alt=""
-                />
-              </Link>
+            <Link to="/signup">
+              <img
+                src="https://i.ibb.co/xzWmCqC/icons8-login-50.png"
+                alt=""
+              />
+            </Link>
           )}
         </div>
       </div>
