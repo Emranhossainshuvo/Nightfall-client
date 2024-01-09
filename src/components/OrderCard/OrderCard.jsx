@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import useAuth from '../../Hooks/useAuth';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 const OrderCard = ({ item }) => {
@@ -20,6 +21,10 @@ const OrderCard = ({ item }) => {
         image, 
         price
       }
+      axios.post('http://localhost:5000/carts', cartItem)
+      .then(res => {
+        console.log(res.data)
+      })
     }
     else {
       Swal.fire({
