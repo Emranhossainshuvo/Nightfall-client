@@ -2,6 +2,11 @@ import PropTypes from 'prop-types'
 const OrderCard = ({item}) => {
   const { name, image, details, price } = item || {};
 
+  const handleAddToCart = product => {
+    console.log("card button clicked: ",  product)
+  }
+
+
   return (
     <>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -16,7 +21,7 @@ const OrderCard = ({item}) => {
           <h2 className="card-title">{name}</h2>
           <p>{details}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Add to cart</button>
+            <button onClick={() => handleAddToCart(item) } className="btn btn-primary">Add to cart</button>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import './styles.css'
 const SectionTitle = ({ heading }) => {
   return (
     <>
-      <div data-aos="fade-up" className="seven my-10">
+      <div data-aos="fade-up" className="seven text-gray-400 my-10">
         <h1>{heading}</h1>
       </div>
     </>

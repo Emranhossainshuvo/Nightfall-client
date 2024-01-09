@@ -17,13 +17,19 @@ const Navbar = () => {
   const navoptions = (
     <>
       <li>
-        <Link className="hover:btn hover:btn-sm" to="/">Home</Link>
+        <Link className="hover:btn hover:btn-sm" to="/">
+          Home
+        </Link>
       </li>
       <li>
-        <Link className="hover:btn hover:btn-sm" to="/products">Products</Link>
+        <Link className="hover:btn hover:btn-sm" to="/products">
+          Products
+        </Link>
       </li>
       <li>
-        <Link className="hover:btn hover:btn-sm" to="/order/pigments">Order online</Link>
+        <Link className="hover:btn hover:btn-sm" to="/order/pigments">
+          Order online
+        </Link>
       </li>
 
       {user ? (
@@ -86,9 +92,12 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <Link to="/signup">
-              <img src="https://i.ibb.co/xzWmCqC/icons8-login-50.png" alt="" />
-            </Link>
+              <Link to="/signup">
+                <img
+                  src="https://i.ibb.co/xzWmCqC/icons8-login-50.png"
+                  alt=""
+                />
+              </Link>
           )}
         </div>
       </div>
