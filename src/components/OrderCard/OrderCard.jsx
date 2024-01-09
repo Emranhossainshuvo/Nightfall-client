@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import useAuth from '../../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 
 const OrderCard = ({item}) => {
@@ -7,7 +8,16 @@ const OrderCard = ({item}) => {
   const {user} = useAuth(); 
 
   const handleAddToCart = product => {
-    console.log("card button clicked: ",  product)
+    if(user && user.email){
+      // TODO: send card data to the database
+    }
+    else{
+      Swal.fire({
+        title: "No user found?",
+        text: "User must login to add product",
+        icon: "question"
+      });
+    }
   }
 
 
