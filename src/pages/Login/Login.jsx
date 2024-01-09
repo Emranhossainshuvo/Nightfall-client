@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   // login functionality from the context
-  const { signIn } = useContext(AuthContext);
+  const { signIn } = useAuth;
 
   const navigate = useNavigate(); 
   const location = useLocation(); 

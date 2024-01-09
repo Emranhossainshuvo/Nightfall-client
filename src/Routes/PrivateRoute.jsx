@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
-import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { AuthContext } from "../Providers/AuthProvider";
+import useAuth from "../Hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
   // user from the global context api
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading } = useAuth();
 
   const location = useLocation(); 
 
