@@ -12,7 +12,7 @@ const OrderCard = ({ item }) => {
   const location = useLocation(); 
   const axiosSecure = useAxiosSecure();
 
-  const handleAddToCart = product => {
+  const handleAddToCart = () => {
     if (user && user.email) {
       const cartItem = {
         orderId: _id, 
