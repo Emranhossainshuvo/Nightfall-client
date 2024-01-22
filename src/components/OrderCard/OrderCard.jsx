@@ -12,6 +12,7 @@ const OrderCard = ({ item }) => {
   const location = useLocation(); 
   const axiosSecure = useAxiosSecure();
 
+
   const handleAddToCart = () => {
     if (user && user.email) {
       const cartItem = {
@@ -51,6 +52,7 @@ const OrderCard = ({ item }) => {
       });
     }
   }
+
 
 
   return (
